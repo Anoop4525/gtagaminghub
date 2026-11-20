@@ -1,0 +1,36 @@
+{
+  "siteName": "GTA Gaming Hub",
+  "domain": "gtagaminghub.store",
+  "baseUrl": "https://gtagaminghub.store",
+  "tagline": "Discover. Compare. Play.",
+  "secondaryTagline": "Your Independent GTA Gaming Discovery Hub",
+  "description": "Premium independent GTA product discovery platform. Compare verified Grand Theft Auto VI editions, explore franchise titles, official merchandise, and gaming accessories with transparent retailer links.",
+  "gaMeasurementId": "G-XXXXXXXXXX",
+  "defaultCurrency": "INR",
+  "supportedCurrencies": ["INR", "USD", "EUR", "GBP"],
+  "initialMarket": "IN",
+  "announcement": {
+    "enabled": true,
+    "badge": "OFFICIAL UPDATE",
+    "text": "GTA 6 confirmed for PlayStation 5 & Xbox Series X|S. Physical retail copies feature Digital Download Code-in-Box.",
+    "linkText": "Compare Editions",
+    "linkUrl": "/gta-6/editions/"
+  },
+  "affiliateNotice": "Some links on this site are affiliate links. We may earn a commission from qualifying purchases at no additional cost to you.",
+  "independenceDisclaimer": "GTA Gaming Hub is an independent gaming discovery website and is not affiliated with, endorsed by, or sponsored by Rockstar Games or Take-Two Interactive. Product and game names belong to their respective owners.",
+  "navigation": [
+    { "title": "GTA 6", "url": "/gta-6/", "highlight": true },
+    { "title": "All Games", "url": "/games/" },
+    { "title": "Editions", "url": "/gta-6/editions/" },
+    { "title": "Compare", "url": "/compare/" },
+    { "title": "Merchandise", "url": "/merchandise/" },
+    { "title": "Accessories", "url": "/accessories/" },
+    { "title": "Guides", "url": "/guides/" }
+  ],
+  "socialLinks": {
+    "twitter": "https://x.com/gtagaminghub",
+    "youtube": "https://youtube.com/@gtagaminghub",
+    "discord": "https://discord.gg/gtagaminghub"
+  },
+  "contactEmail": "contact@gtagaminghub.store"
+}

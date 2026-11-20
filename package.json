@@ -1,0 +1,21 @@
+{
+  "name": "gtagaminghub-store",
+  "version": "1.0.0",
+  "description": "Premium independent GTA product discovery and affiliate platform for https://gtagaminghub.store",
+  "main": "index.html",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "node tests/test-site.js",
+    "validate": "node scripts/validate-products.js"
+  },
+  "keywords": [
+    "gta-6",
+    "gta-gaming-hub",
+    "affiliate-commerce",
+    "ps5",
+    "xbox",
+    "grand-theft-auto"
+  ],
+  "author": "GTA Gaming Hub",
+  "license": "UNLICENSED"
+}

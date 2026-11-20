@@ -1,0 +1,334 @@
+[
+  {
+    "slug": "gta-6",
+    "title": "Grand Theft Auto VI",
+    "subtitle": "The Next Horizon of Open-World Gaming",
+    "releaseYear": 2026,
+    "releaseDate": "Announced for 2026",
+    "developer": "Rockstar Games",
+    "publisher": "Rockstar Games / Take-Two Interactive",
+    "setting": "State of Leonida (Vice City & beyond)",
+    "protagonists": ["Lucia", "Jason"],
+    "supportedPlatforms": ["PlayStation 5", "Xbox Series X|S"],
+    "unsupportedPlatforms": ["PC (Not announced)", "PS4 (Not supported)", "Xbox One (Not supported)", "Nintendo Switch (Not supported)"],
+    "ageRating": "ESRB M (Mature 17+) / PEGI 18",
+    "status": "Officially Confirmed / Announced",
+    "verifiedEditions": [
+      {
+        "name": "Standard Edition",
+        "format": "Physical Code-in-Box / Digital Download",
+        "description": "Base game access for PlayStation 5 and Xbox Series X|S. Note: Physical retail edition contains digital voucher code (no physical disc)."
+      },
+      {
+        "name": "Ultimate Edition",
+        "format": "Digital Download",
+        "description": "Premium digital release featuring exclusive bonus in-game items, vehicle perks, and deluxe customization packs."
+      },
+      {
+        "name": "Ultimate Edition Upgrade",
+        "format": "Digital Add-on",
+        "description": "Post-launch digital add-on allowing Standard Edition owners to unlock Ultimate content without rebuying the game."
+      }
+    ],
+    "description": "Grand Theft Auto VI heads to the neon-soaked streets of Vice City and the sprawling state of Leonida in the biggest, most immersive evolution of the Grand Theft Auto series yet. Follow the dual story of Lucia and Jason through high-stakes heists, modern subcultures, and next-generation environmental realism.",
+    "buyerAdvice": "Ensure your console has at least 150GB of free SSD storage. For PS5 owners, the physical box is a collector package with a digital download voucher, requiring high-speed broadband to redeem.",
+    "officialUrl": "https://www.rockstargames.com/VI",
+    "isFlagship": true
+  },
+  {
+    "slug": "gta-5",
+    "title": "Grand Theft Auto V",
+    "subtitle": "Los Santos & Blaine County Masterpiece",
+    "releaseYear": 2013,
+    "releaseDate": "September 17, 2013 (PS3/360), 2014 (PS4/XOne), 2015 (PC), 2022 (PS5/XSX)",
+    "developer": "Rockstar North",
+    "publisher": "Rockstar Games",
+    "setting": "Los Santos & Blaine County, San Andreas",
+    "protagonists": ["Michael De Santa", "Franklin Clinton", "Trevor Philips"],
+    "supportedPlatforms": ["PlayStation 5", "PlayStation 4", "Xbox Series X|S", "Xbox One", "PC"],
+    "unsupportedPlatforms": ["PS3 / Xbox 360 (Online services discontinued)"],
+    "ageRating": "ESRB M (17+) / PEGI 18",
+    "status": "Available Worldwide",
+    "verifiedEditions": [
+      {
+        "name": "GTA V: Premium Edition",
+        "format": "Physical & Digital",
+        "description": "Includes the complete story mode, GTA Online access, and the Criminal Enterprise Starter Pack ($1,000,000 bonus cash)."
+      },
+      {
+        "name": "GTA V Enhanced (PS5 / Xbox Series X|S)",
+        "format": "Physical & Digital",
+        "description": "Features 4K resolution, 60 FPS performance mode, ray-traced shadows, HDR, faster loading, and DualSense haptics."
+      },
+      {
+        "name": "GTA Online Standalone",
+        "format": "Digital Download",
+        "description": "Standalone multiplayer version for PS5, Xbox Series X|S, and PC."
+      }
+    ],
+    "description": "When a young street hustler, a retired bank robber and a terrifying psychopath find themselves entangled with some of the most frightening and deranged elements of the criminal underworld, the U.S. government and the entertainment industry, they must pull off a series of dangerous heists to survive in a ruthless city in which they can trust nobody — least of all each other.",
+    "buyerAdvice": "If playing on modern consoles, choose the PS5 or Xbox Series X|S Enhanced Edition for 60 FPS and ray tracing. The Premium Edition provides the best value on PC and previous-gen hardware.",
+    "officialUrl": "https://www.rockstargames.com/gta-v",
+    "isFlagship": false
+  },
+  {
+    "slug": "gta-4",
+    "title": "Grand Theft Auto IV",
+    "subtitle": "The Dark Gritty Dawn of HD Liberty City",
+    "releaseYear": 2008,
+    "releaseDate": "April 29, 2008",
+    "developer": "Rockstar North",
+    "publisher": "Rockstar Games",
+    "setting": "Liberty City (Broker, Dukes, Bohan, Algonquin, Alderney)",
+    "protagonists": ["Niko Bellic"],
+    "supportedPlatforms": ["PC (Steam / Rockstar Games Launcher)", "Xbox Series X|S (via Backward Compatibility)", "Xbox One (Backward Compatibility)", "PS3 / Xbox 360 (Original)"],
+    "unsupportedPlatforms": ["PS4 (No native release)", "PS5 (No native release)"],
+    "ageRating": "ESRB M (17+) / PEGI 18",
+    "status": "Available via PC and Xbox Backward Compatibility",
+    "verifiedEditions": [
+      {
+        "name": "GTA IV: The Complete Edition",
+        "format": "Digital (PC / Xbox)",
+        "description": "Includes Grand Theft Auto IV plus both critically acclaimed episodes: The Lost and Damned and The Ballad of Gay Tony."
+      }
+    ],
+    "description": "What does the American dream mean today? For Niko Bellic, fresh off the boat from Europe, it is the hope he can escape his past. For his cousin, Roman, it is the vision that together they can find fortune in Liberty City, gateway to the land of opportunity.",
+    "buyerAdvice": "Xbox Series X|S players can purchase the Xbox 360 version digitally via the Microsoft Store and play at a solid 60 FPS through backward compatibility. PC players should get The Complete Edition on Steam.",
+    "officialUrl": "https://www.rockstargames.com/games/iv",
+    "isFlagship": false
+  },
+  {
+    "slug": "gta-san-andreas",
+    "title": "Grand Theft Auto: San Andreas",
+    "subtitle": "The Definitive 90s Open-World Masterpiece",
+    "releaseYear": 2004,
+    "releaseDate": "October 26, 2004",
+    "developer": "Rockstar North",
+    "publisher": "Rockstar Games",
+    "setting": "State of San Andreas (Los Santos, San Fierro, Las Venturas)",
+    "protagonists": ["Carl 'CJ' Johnson"],
+    "supportedPlatforms": ["PlayStation 5 / PS4 (Definitive Edition)", "Xbox Series X|S / Xbox One (Definitive Edition)", "Nintendo Switch", "PC", "iOS / Android (Netflix & Classic)"],
+    "unsupportedPlatforms": ["Original PS2/PC version delisted from primary digital storefronts"],
+    "ageRating": "ESRB M (17+) / PEGI 18",
+    "status": "Available via The Definitive Edition & Mobile",
+    "verifiedEditions": [
+      {
+        "name": "The Definitive Edition",
+        "format": "Digital & Physical",
+        "description": "Upgraded with high-resolution textures, GTA V-style controls, improved lighting, and environmental enhancements."
+      }
+    ],
+    "description": "Five years ago Carl Johnson escaped from the pressures of life in Los Santos, San Andreas... a city tearing itself apart with gang trouble, drugs and corruption. Now, it's the early 90s. Carl's got to go home. His mother has been murdered, his family has fallen apart and his childhood friends are all heading towards disaster.",
+    "buyerAdvice": "Available as part of GTA: The Trilogy – The Definitive Edition across modern consoles and PC. Mobile versions are also included in active Netflix subscriptions.",
+    "officialUrl": "https://www.rockstargames.com/games/sanandreas",
+    "isFlagship": false
+  },
+  {
+    "slug": "gta-vice-city",
+    "title": "Grand Theft Auto: Vice City",
+    "subtitle": "The 1980s Neon Crime Epic",
+    "releaseYear": 2002,
+    "releaseDate": "October 29, 2002",
+    "developer": "Rockstar North",
+    "publisher": "Rockstar Games",
+    "setting": "Vice City (1986)",
+    "protagonists": ["Tommy Vercetti"],
+    "supportedPlatforms": ["PS5, PS4, Xbox Series X|S, Xbox One, Switch, PC (Definitive Edition)", "iOS / Android"],
+    "unsupportedPlatforms": ["Original PS2/PC standalone digital delisted"],
+    "ageRating": "ESRB M (17+) / PEGI 18",
+    "status": "Available via The Definitive Edition & Mobile",
+    "verifiedEditions": [
+      {
+        "name": "The Definitive Edition",
+        "format": "Digital & Physical",
+        "description": "Part of the Definitive Edition trilogy with enhanced neon reflections, modern aiming, and widescreen support."
+      }
+    ],
+    "description": "Welcome to the 1980s. From the decade of big hair, excess and pastel suits comes a story of one man's rise to the top of the criminal pile as Grand Theft Auto returns. Vice City is a huge urban sprawl ranging from the beach to the swamps and the glitz to the ghetto.",
+    "buyerAdvice": "Essential playing before GTA 6! Experiencing the original Vice City geography and atmosphere will help you appreciate the massive upgrades in Leonida.",
+    "officialUrl": "https://www.rockstargames.com/games/vicecity",
+    "isFlagship": false
+  },
+  {
+    "slug": "gta-3",
+    "title": "Grand Theft Auto III",
+    "subtitle": "The Revolution of 3D Open-World Gaming",
+    "releaseYear": 2001,
+    "releaseDate": "October 22, 2001",
+    "developer": "DMA Design / Rockstar Games",
+    "publisher": "Rockstar Games",
+    "setting": "Liberty City (Portland, Staunton Island, Shoreside Vale)",
+    "protagonists": ["Claude"],
+    "supportedPlatforms": ["PS5, PS4, Xbox Series X|S, Xbox One, Switch, PC (Definitive Edition)", "Mobile"],
+    "unsupportedPlatforms": ["Original PS2/PC version delisted from primary digital stores"],
+    "ageRating": "ESRB M (17+) / PEGI 18",
+    "status": "Available via The Definitive Edition & Mobile",
+    "verifiedEditions": [
+      {
+        "name": "The Definitive Edition",
+        "format": "Digital & Physical",
+        "description": "Included in GTA The Trilogy – Definitive Edition with updated controls and rendering."
+      }
+    ],
+    "description": "The sprawling crime epic that changed open-world games forever. Claude is betrayed by his girlfriend during a bank heist, escapes custody during a prison transport attack, and claws his way through the Liberty City underworld.",
+    "buyerAdvice": "Best experienced as part of GTA The Trilogy Definitive Edition package. Note the classic lack of in-car maps and steep early 2000s mission difficulty.",
+    "officialUrl": "https://www.rockstargames.com/games",
+    "isFlagship": false
+  },
+  {
+    "slug": "gta-trilogy",
+    "title": "Grand Theft Auto: The Trilogy – The Definitive Edition",
+    "subtitle": "Three Iconic Cities. Three Epic Stories.",
+    "releaseYear": 2021,
+    "releaseDate": "November 11, 2021",
+    "developer": "Grove Street Games / Rockstar Games",
+    "publisher": "Rockstar Games",
+    "setting": "Liberty City (GTA III), Vice City (Vice City), State of San Andreas (San Andreas)",
+    "protagonists": ["Claude", "Tommy Vercetti", "Carl 'CJ' Johnson"],
+    "supportedPlatforms": ["PS5, PS4, Xbox Series X|S, Xbox One, Nintendo Switch, PC, iOS, Android"],
+    "unsupportedPlatforms": [],
+    "ageRating": "ESRB M (17+) / PEGI 18",
+    "status": "Available Worldwide",
+    "verifiedEditions": [
+      {
+        "name": "Definitive Edition Bundle",
+        "format": "Physical & Digital",
+        "description": "Contains GTA III, GTA: Vice City, and GTA: San Andreas with modern lighting, high-resolution textures, and controller mappings."
+      }
+    ],
+    "description": "Play the genre-defining classics of the original Grand Theft Auto Trilogy: Grand Theft Auto III, Grand Theft Auto: Vice City and Grand Theft Auto: San Andreas updated for a new generation, with across-the-board enhancements including brilliant new lighting and environmental upgrades.",
+    "buyerAdvice": "After major community and official patches (including Classic Lighting mode), the trilogy is now in a much improved state and represents the easiest legal way to play all three classic games on modern hardware.",
+    "officialUrl": "https://store.rockstargames.com/en/game/buy-grand-theft-auto-the-trilogy-the-definitive-edition",
+    "isFlagship": false
+  },
+  {
+    "slug": "gta-chinatown-wars",
+    "title": "Grand Theft Auto: Chinatown Wars",
+    "subtitle": "Award-Winning Portable Open-World Action",
+    "releaseYear": 2009,
+    "releaseDate": "March 17, 2009",
+    "developer": "Rockstar Leeds / Rockstar North",
+    "publisher": "Rockstar Games",
+    "setting": "Liberty City (Cel-shaded Top-Down)",
+    "protagonists": ["Huang Lee"],
+    "supportedPlatforms": ["iOS, Android, Nintendo DS (Physical), PSP (Physical/Digital)"],
+    "unsupportedPlatforms": ["No modern home console port"],
+    "ageRating": "ESRB M (17+) / PEGI 18",
+    "status": "Available on iOS and Android App Stores",
+    "verifiedEditions": [
+      {
+        "name": "Mobile Edition",
+        "format": "Digital App Store",
+        "description": "Touchscreen-optimized edition featuring widescreen support, customizable controls, and retina display assets."
+      }
+    ],
+    "description": "Following his father's murder, Huang Lee has a simple mission: deliver an ancient sword to his Uncle Kenny to ensure his family retains control of the Triad gangs of Liberty City. Left for dead after being mugged, Huang must fight for honor, riches and revenge in the most dangerous city in the world.",
+    "buyerAdvice": "A hidden gem in the franchise. The drug-dealing economics minigame and tactile touchscreen interactions make it one of the highest rated handheld games in history.",
+    "officialUrl": "https://www.rockstargames.com/games/chinatownwars",
+    "isFlagship": false
+  },
+  {
+    "slug": "gta-liberty-city-stories",
+    "title": "Grand Theft Auto: Liberty City Stories",
+    "subtitle": "The Leone Crime Family Prequel",
+    "releaseYear": 2005,
+    "releaseDate": "October 24, 2005",
+    "developer": "Rockstar Leeds / Rockstar North",
+    "publisher": "Rockstar Games",
+    "setting": "Liberty City (1998)",
+    "protagonists": ["Toni Cipriani"],
+    "supportedPlatforms": ["iOS, Android, PSP (Physical), PS2 (Physical)"],
+    "unsupportedPlatforms": ["PS4 / PS5 (No native port)"],
+    "ageRating": "ESRB M (17+) / PEGI 18",
+    "status": "Available on Mobile Stores",
+    "verifiedEditions": [
+      {
+        "name": "Mobile Remaster",
+        "format": "Digital App Store",
+        "description": "Enhanced mobile release with real-time lighting, high-resolution textures, and physical controller support."
+      }
+    ],
+    "description": "There are a million stories in Liberty City. This one changes everything. Once a trusted wise guy in the Leone crime family, Toni Cipriani was forced into hiding after killing a made man. Now he's back and it's time for things to be put right.",
+    "buyerAdvice": "Fills in the backstories of Salvatore Leone, Donald Love, and how the Leone family dominated Liberty City three years before GTA III.",
+    "officialUrl": "https://www.rockstargames.com/games/libertycitystories",
+    "isFlagship": false
+  },
+  {
+    "slug": "gta-vice-city-stories",
+    "title": "Grand Theft Auto: Vice City Stories",
+    "subtitle": "Building an 80s Empire in Vice City",
+    "releaseYear": 2006,
+    "releaseDate": "October 31, 2006",
+    "developer": "Rockstar Leeds / Rockstar North",
+    "publisher": "Rockstar Games",
+    "setting": "Vice City (1984)",
+    "protagonists": ["Victor Vance"],
+    "supportedPlatforms": ["PSP (Physical/Digital), PS2 (Physical)"],
+    "unsupportedPlatforms": ["Not currently available on modern digital storefronts or mobile"],
+    "ageRating": "ESRB M (17+) / PEGI 18",
+    "status": "Historical Title (Physical / Retro Only)",
+    "verifiedEditions": [
+      {
+        "name": "Original Release",
+        "format": "UMD (PSP) / DVD (PS2)",
+        "description": "Features empire-building gameplay where players conquer rival gang businesses and build protection, loan shark, and contraband networks."
+      }
+    ],
+    "description": "Vice City, 1984. Opportunity abounds in a city emerging from the swamps, its growth fueled by the violent power struggle in a lucrative drugs trade. Soldier Victor Vance has always protected his family, but one bad decision turns him onto the violent streets.",
+    "buyerAdvice": "Due to complex music licensing, this title is currently not on modern digital storefronts. Players can only experience it legally via authentic second-hand PSP or PS2 copies.",
+    "officialUrl": "https://www.rockstargames.com/games/vicecitystories",
+    "isFlagship": false
+  },
+  {
+    "slug": "gta-1",
+    "title": "Grand Theft Auto (Original)",
+    "subtitle": "The Top-Down Pioneer That Started It All",
+    "releaseYear": 1997,
+    "releaseDate": "November 28, 1997",
+    "developer": "DMA Design",
+    "publisher": "BMG Interactive / ASC Games / Rockstar Games",
+    "setting": "Liberty City, San Andreas, Vice City (2D Top-Down)",
+    "protagonists": ["Multiple selectable criminals (Travis, Troy, Kivlov, Ulrika, etc.)"],
+    "supportedPlatforms": ["PC (MS-DOS / Windows), PlayStation 1, Game Boy Color"],
+    "unsupportedPlatforms": ["No modern store release"],
+    "ageRating": "BBFC 18 / ESRB M",
+    "status": "Historical Pioneer / Classic",
+    "verifiedEditions": [
+      {
+        "name": "Original CD-ROM / PS1 Disc",
+        "format": "Physical Retro",
+        "description": "Introduced the three iconic cities: Liberty City, San Andreas, and Vice City in bird's-eye 2D perspective with dynamic radio stations."
+      }
+    ],
+    "description": "Created by Scottish studio DMA Design, the original Grand Theft Auto shocked the world with its freeform open-ended criminality, runaway police chases, and irreverent radio stations.",
+    "buyerAdvice": "A crucial piece of video game history. Check retro PC gaming archives and enthusiast collections for authentic physical discs.",
+    "officialUrl": "https://www.rockstargames.com/games/gta",
+    "isFlagship": false
+  },
+  {
+    "slug": "gta-2",
+    "title": "Grand Theft Auto 2",
+    "subtitle": "Respect is Everything",
+    "releaseYear": 1999,
+    "releaseDate": "October 22, 1999",
+    "developer": "DMA Design",
+    "publisher": "Rockstar Games",
+    "setting": "Anywhere City (Retro-futuristic)",
+    "protagonists": ["Claude Speed"],
+    "supportedPlatforms": ["PC, PlayStation 1, Sega Dreamcast, Game Boy Color"],
+    "unsupportedPlatforms": ["Delisted from modern stores"],
+    "ageRating": "ESRB T (Teen) / BBFC 18",
+    "status": "Historical Classic",
+    "verifiedEditions": [
+      {
+        "name": "Classic Release",
+        "format": "Physical CD-ROM",
+        "description": "Pioneered the famous Gang Respect meter, lighting effects, and multi-faction conflict between Zaibatsu, Loonies, Yakuza, and Russian mob."
+      }
+    ],
+    "description": "Set in a retro-futuristic metropolis known as Anywhere, City, GTA 2 introduced seven competing criminal factions and the groundbreaking 'Respect is Everything' gameplay mechanic.",
+    "buyerAdvice": "Available as a collector's retro item on PS1 and PC. Was previously distributed as official freeware by Rockstar Classics in the 2000s.",
+    "officialUrl": "https://www.rockstargames.com/games",
+    "isFlagship": false
+  }
+]

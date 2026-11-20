@@ -1,0 +1,50 @@
+[
+  {
+    "id": "amazon-in",
+    "name": "Amazon India",
+    "type": "Online Marketplace",
+    "region": "India",
+    "currency": "INR",
+    "affiliateProgram": "Amazon Associates India",
+    "defaultCommissionRate": "2.8% (Video Games), 4-9% (Accessories)",
+    "returnPolicyUrl": "https://www.amazon.in/gp/help/customer/display.html?nodeId=201083470",
+    "verified": true,
+    "icon": "amazon"
+  },
+  {
+    "id": "playstation-store",
+    "name": "PlayStation Store",
+    "type": "Official First-Party Store",
+    "region": "Global / India",
+    "currency": "INR / USD",
+    "affiliateProgram": "Sony Direct / Creator Program",
+    "defaultCommissionRate": "Direct",
+    "returnPolicyUrl": "https://www.playstation.com/en-in/support/store/cancellation-policy/",
+    "verified": true,
+    "icon": "playstation"
+  },
+  {
+    "id": "xbox-store",
+    "name": "Microsoft Store / Xbox",
+    "type": "Official First-Party Store",
+    "region": "Global / India",
+    "currency": "INR / USD",
+    "affiliateProgram": "Microsoft Affiliate / Direct",
+    "defaultCommissionRate": "Direct",
+    "returnPolicyUrl": "https://support.microsoft.com/en-us/account-billing/returning-items-you-bought-from-microsoft-for-exchange-or-refund-81629012-aa4f-f48b-2394-8596f415072b",
+    "verified": true,
+    "icon": "xbox"
+  },
+  {
+    "id": "rockstar-store",
+    "name": "Rockstar Games Store",
+    "type": "Official Publisher Store",
+    "region": "Global",
+    "currency": "USD / Multi",
+    "affiliateProgram": "Direct Official",
+    "defaultCommissionRate": "Direct",
+    "returnPolicyUrl": "https://store.rockstargames.com/help",
+    "verified": true,
+    "icon": "rockstar"
+  }
+]

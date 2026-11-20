@@ -1,0 +1,131 @@
+{
+  "$schema": "./schema-affiliate.json",
+  "version": "1.0.0",
+  "lastUpdated": "2026-11-21T01:45:00Z",
+  "ownerTrackingIds": {
+    "amazonIndia": "",
+    "amazonUS": "",
+    "playstation": "",
+    "xbox": "",
+    "rockstar": ""
+  },
+  "defaultNetworkRules": {
+    "amazon": {
+      "tagParam": "tag",
+      "requiredRel": "sponsored noopener noreferrer",
+      "disclaimer": "As an Amazon Associate I earn from qualifying purchases."
+    }
+  },
+  "links": {
+    "gta6-ps5-standard-box": {
+      "productId": "gta6-ps5-standard-box",
+      "primaryRetailer": "Amazon India",
+      "affiliateUrl": "",
+      "directOfficialUrl": "https://www.amazon.in/Grand-Theft-Auto-Standard-PlayStation/dp/B0H6X8VNQC",
+      "status": "pending_affiliate_tag",
+      "commissionCategory": "Video Games (2.8%)",
+      "buttonLabel": "Check on Amazon India",
+      "fallbackLabel": "View on Amazon"
+    },
+    "gta6-xbox-standard-box": {
+      "productId": "gta6-xbox-standard-box",
+      "primaryRetailer": "Amazon India",
+      "affiliateUrl": "",
+      "directOfficialUrl": "https://www.xbox.com/en-us/games/store/grand-theft-auto-vi/9nl3wwnzlzzn",
+      "status": "pending_affiliate_tag",
+      "commissionCategory": "Video Games (2.8%)",
+      "buttonLabel": "Check on Amazon India",
+      "fallbackLabel": "View on Xbox Store"
+    },
+    "gta6-ps5-standard-digital": {
+      "productId": "gta6-ps5-standard-digital",
+      "primaryRetailer": "PlayStation Store",
+      "affiliateUrl": "",
+      "directOfficialUrl": "https://store.playstation.com/concept/10000730",
+      "status": "direct_official_only",
+      "commissionCategory": "Direct Retailer (0%)",
+      "buttonLabel": "View on PlayStation Store",
+      "fallbackLabel": "Official Store"
+    },
+    "gta6-xbox-standard-digital": {
+      "productId": "gta6-xbox-standard-digital",
+      "primaryRetailer": "Microsoft / Xbox Store",
+      "affiliateUrl": "",
+      "directOfficialUrl": "https://www.xbox.com/en-us/games/store/grand-theft-auto-vi/9nl3wwnzlzzn",
+      "status": "direct_official_only",
+      "commissionCategory": "Direct Retailer (0%)",
+      "buttonLabel": "View on Xbox Store",
+      "fallbackLabel": "Official Store"
+    },
+    "gta6-ultimate-edition-ps5": {
+      "productId": "gta6-ultimate-edition-ps5",
+      "primaryRetailer": "PlayStation Store",
+      "affiliateUrl": "",
+      "directOfficialUrl": "https://www.rockstargames.com/VI/editions",
+      "status": "direct_official_only",
+      "commissionCategory": "Direct Retailer (0%)",
+      "buttonLabel": "View Official Editions",
+      "fallbackLabel": "Rockstar Editions"
+    },
+    "gta6-ultimate-edition-xbox": {
+      "productId": "gta6-ultimate-edition-xbox",
+      "primaryRetailer": "Xbox Store",
+      "affiliateUrl": "",
+      "directOfficialUrl": "https://www.rockstargames.com/VI/editions",
+      "status": "direct_official_only",
+      "commissionCategory": "Direct Retailer (0%)",
+      "buttonLabel": "View Official Editions",
+      "fallbackLabel": "Rockstar Editions"
+    },
+    "gta-franchise-02-gta5": {
+      "productId": "gta-franchise-02-gta5",
+      "primaryRetailer": "Amazon India",
+      "affiliateUrl": "",
+      "directOfficialUrl": "https://store.rockstargames.com/game/buy-gta-v",
+      "status": "pending_affiliate_tag",
+      "commissionCategory": "Video Games (2.8%)",
+      "buttonLabel": "Check Price on Amazon",
+      "fallbackLabel": "View Rockstar Store"
+    },
+    "gta-franchise-11-gta-trilogy-de": {
+      "productId": "gta-franchise-11-gta-trilogy-de",
+      "primaryRetailer": "Amazon India",
+      "affiliateUrl": "",
+      "directOfficialUrl": "https://store.rockstargames.com/en/game/buy-grand-theft-auto-the-trilogy-the-definitive-edition",
+      "status": "pending_affiliate_tag",
+      "commissionCategory": "Video Games (2.8%)",
+      "buttonLabel": "Check Price on Amazon",
+      "fallbackLabel": "View Official Store"
+    },
+    "accessory-65-ps5-dualsense": {
+      "productId": "accessory-65-ps5-dualsense",
+      "primaryRetailer": "Amazon India",
+      "affiliateUrl": "",
+      "directOfficialUrl": "https://www.amazon.in/s?k=PS5+DualSense+controller",
+      "status": "pending_affiliate_tag",
+      "commissionCategory": "Gaming Accessories (4-5%)",
+      "buttonLabel": "Check Price on Amazon",
+      "fallbackLabel": "Search on Amazon"
+    },
+    "accessory-71-ps5-compatible-ssd": {
+      "productId": "accessory-71-ps5-compatible-ssd",
+      "primaryRetailer": "Amazon India",
+      "affiliateUrl": "",
+      "directOfficialUrl": "https://www.amazon.in/s?k=PS5+compatible+SSD",
+      "status": "pending_affiliate_tag",
+      "commissionCategory": "PC Storage & Peripherals (4-5%)",
+      "buttonLabel": "Check Price on Amazon",
+      "fallbackLabel": "Search on Amazon"
+    },
+    "accessory-72-gaming-chair": {
+      "productId": "accessory-72-gaming-chair",
+      "primaryRetailer": "Amazon India",
+      "affiliateUrl": "",
+      "directOfficialUrl": "https://www.amazon.in/s?k=gaming+chair",
+      "status": "pending_affiliate_tag",
+      "commissionCategory": "Furniture (5-9%)",
+      "buttonLabel": "Check Price on Amazon",
+      "fallbackLabel": "Search on Amazon"
+    }
+  }
+}
