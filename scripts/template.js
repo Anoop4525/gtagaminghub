@@ -14,6 +14,38 @@ const guides = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'guides.json'), 'u
 const affiliateConfig = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'affiliate-links.json'), 'utf8'));
 const retailers = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'retailers.json'), 'utf8'));
 
+// Asset dimension map (generated from the master asset package) — powers CLS-safe <img> tags.
+let assetMap = {};
+try {
+  assetMap = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'asset-map.json'), 'utf8'));
+} catch (e) {
+  assetMap = {};
+}
+
+/**
+ * Render a managed <img> for a packaged asset.
+ * Pulls intrinsic width/height from asset-map.json (zero layout shift),
+ * lazy-loads + async-decodes by default, and hides gracefully if a file is ever missing.
+ */
+function assetImg(assetPath, opts = {}) {
+  const {
+    alt = '',
+    className = '',
+    loading = 'lazy',
+    fetchpriority = '',
+    sizes = '',
+    style = ''
+  } = opts;
+  const meta = assetMap[assetPath] || {};
+  const dim = (meta.width && meta.height) ? ` width="${meta.width}" height="${meta.height}"` : '';
+  const fp = fetchpriority ? ` fetchpriority="${fetchpriority}"` : '';
+  const sz = sizes ? ` sizes="${sizes}"` : '';
+  const st = style ? ` style="${style}"` : '';
+  const cls = className ? ` class="${className}"` : '';
+  const safeAlt = String(alt).replace(/"/g, '&quot;');
+  return `<img src="${assetPath}" alt="${safeAlt}"${dim} loading="${loading}" decoding="async"${fp}${sz}${cls}${st} onerror="this.style.display='none';this.setAttribute('data-asset-missing','1');">`;
+}
+
 // SVG Icons
 const ICONS = {
   logo: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="34" height="34">
@@ -269,7 +301,7 @@ function renderFooter() {
 
 function renderHtmlDocument({ title, description, canonicalPath, schemaJson, content }) {
   const fullCanonicalUrl = `${siteConfig.baseUrl}${canonicalPath}`;
-  const ogImageUrl = `${siteConfig.baseUrl}/favicon.svg`;
+  const ogImageUrl = `${siteConfig.baseUrl}/assets/shared/final-cta-banner.webp`;
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -359,5 +391,7 @@ module.exports = {
   affiliateConfig,
   retailers,
   ICONS,
+  assetImg,
+  assetMap,
   renderHtmlDocument
 };

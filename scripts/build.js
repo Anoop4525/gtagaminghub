@@ -8,10 +8,21 @@ const {
   affiliateConfig,
   retailers,
   ICONS,
+  assetImg,
   renderHtmlDocument
 } = require('./template');
 
 const { renderFeaturedCard, renderCatalogueCard } = require('./components');
+
+// Full-bleed decorative banner background for an interior-page hero.
+// Sits behind the hero content (which must be position:relative; z-index:10).
+function heroBanner(assetPath, opacity = 0.2, overlay = 0.5) {
+  return `
+    <div style="position:absolute;inset:0;z-index:0;pointer-events:none;">
+      ${assetImg(assetPath, { alt: '', style: `width:100%;height:100%;object-fit:cover;opacity:${opacity};` })}
+      <div style="position:absolute;inset:0;background:var(--bg-primary,#090714);opacity:${overlay};"></div>
+    </div>`;
+}
 
 const ROOT_DIR = path.resolve(__dirname, '..');
 const DIST_DIR = path.join(ROOT_DIR, 'dist');
@@ -53,6 +64,13 @@ function mirrorAssets() {
     fs.copyFileSync(path.join(ROOT_DIR, 'public/robots.txt'), path.join(DIST_DIR, 'robots.txt'));
     fs.copyFileSync(path.join(ROOT_DIR, 'public/robots.txt'), path.join(ROOT_DIR, 'robots.txt'));
   }
+
+  // Deploy /assets to the SITE ROOT (and dist root) so pages referencing /assets/... resolve.
+  const assetsSrc = path.join(ROOT_DIR, 'public/assets');
+  if (fs.existsSync(assetsSrc)) {
+    fs.cpSync(assetsSrc, path.join(ROOT_DIR, 'assets'), { recursive: true });
+    fs.cpSync(assetsSrc, path.join(DIST_DIR, 'assets'), { recursive: true });
+  }
 }
 
 // -------------------------------------------------------------
@@ -64,37 +82,12 @@ function buildHomepage() {
   const featuredGuides = guides.slice(0, 3);
 
   const heroGraphic = `
-  <div class="relative w-full max-w-lg mx-auto py-6 flex items-center justify-center">
-    <!-- Abstract Vector Cityscape & Hex Grid -->
-    <svg viewBox="0 0 500 320" class="w-full h-auto drop-shadow-2xl">
-      <defs>
-        <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stop-color="#171E2B" stop-opacity="0.8"/>
-          <stop offset="100%" stop-color="#080B12" stop-opacity="1"/>
-        </linearGradient>
-        <linearGradient id="neonLine" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#7A5CFF"/>
-          <stop offset="50%" stop-color="#39B8FF"/>
-          <stop offset="100%" stop-color="#B7FF42"/>
-        </linearGradient>
-      </defs>
-      <!-- Background Map Grid -->
-      <path d="M 50,280 L 450,280 M 80,240 L 420,240 M 120,200 L 380,200 M 160,160 L 340,160" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" fill="none"/>
-      <path d="M 100,280 L 160,160 M 200,280 L 220,160 M 300,280 L 280,160 M 400,280 L 340,160" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" fill="none"/>
-      
-      <!-- Abstract Stylized Buildings -->
-      <polygon points="120,280 120,130 160,130 160,280" fill="#101520" stroke="rgba(255,255,255,0.1)"/>
-      <polygon points="170,280 170,90 220,70 230,280" fill="#171E2B" stroke="url(#neonLine)" stroke-width="2"/>
-      <polygon points="240,280 240,110 290,110 290,280" fill="#101520" stroke="rgba(255,255,255,0.1)"/>
-      <polygon points="300,280 300,140 350,140 350,280" fill="#171E2B" stroke="rgba(57,184,255,0.4)"/>
-      
-      <!-- Horizon Neon Bar -->
-      <line x1="50" y1="280" x2="450" y2="280" stroke="url(#neonLine)" stroke-width="3"/>
-      
-      <!-- Floating Platform Badge -->
-      <rect x="180" y="24" width="140" height="34" rx="17" fill="#171E2B" stroke="#B7FF42" stroke-width="1.5"/>
-      <text x="250" y="46" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700" fill="#B7FF42" text-anchor="middle">LEONIDA • VICE CITY</text>
-    </svg>
+  <div style="position:relative;width:100%;max-width:640px;margin:1.5rem auto 0;">
+    ${assetImg('/assets/hero/hero-neon-city.webp', { alt: 'Stylized neon tropical-night city skyline (decorative)', loading: 'eager', style: 'position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0.35;filter:blur(1px);' })}
+    ${assetImg('/assets/hero/hero-sports-car.webp', { alt: 'Original stylized neon sports car (decorative illustration)', loading: 'eager', fetchpriority: 'high', sizes: '(max-width: 768px) 90vw, 640px', style: 'position:relative;z-index:10;display:block;width:100%;height:auto;filter:drop-shadow(0 20px 40px rgba(0,0,0,.55));' })}
+    <div style="position:absolute;bottom:-6px;right:-4px;width:38%;max-width:170px;z-index:20;">
+      ${assetImg('/assets/hero/hero-controller.webp', { alt: 'Original neon gaming controller (decorative illustration)', style: 'width:100%;height:auto;filter:drop-shadow(0 10px 24px rgba(0,0,0,.45));' })}
+    </div>
   </div>`;
 
   const content = `
@@ -188,6 +181,33 @@ function buildHomepage() {
           <p class="text-xs text-secondary mb-4">GTA V Enhanced/Legacy, GTA IV Complete, Definitive Trilogy, and gaming peripherals.</p>
           <span class="text-xs font-semibold text-accent-primary">Browse PC Games &rarr;</span>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section D2: Browse By Category (packaged artwork) -->
+  <section class="py-20 border-b border-subtle bg-secondary/20">
+    <div class="container-custom">
+      <div class="text-center max-w-xl mx-auto mb-12">
+        <div class="text-xs font-bold uppercase tracking-wider text-accent-primary mb-2">Quick Browse</div>
+        <h2 class="text-3xl font-bold text-primary mb-3">Explore By Category</h2>
+        <p class="text-sm text-secondary">Jump straight to the part of the hub you came for.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1rem;">
+        ${[
+          ['/gta-6/', '/assets/categories/category-gta6-spotlight.webp', 'GTA 6 Spotlight'],
+          ['/games/', '/assets/categories/category-all-games.webp', 'All Games'],
+          ['/gta-6/editions/', '/assets/categories/category-editions.webp', 'Editions'],
+          ['/merchandise/', '/assets/categories/category-merchandise.webp', 'Merchandise'],
+          ['/accessories/', '/assets/categories/category-accessories.webp', 'Accessories'],
+          ['/guides/', '/assets/categories/category-guides.webp', 'Guides']
+        ].map(([href, img, label]) => `
+          <a href="${href}" class="card card-interactive group" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.25rem;">
+            <div style="width:84px;height:84px;margin-bottom:0.75rem;">
+              ${assetImg(img, { alt: label + ' category icon', style: 'width:100%;height:100%;object-fit:contain;' })}
+            </div>
+            <span class="text-sm font-bold text-primary group-hover:text-accent-primary transition-colors">${label}</span>
+          </a>`).join('')}
       </div>
     </div>
   </section>
@@ -311,8 +331,14 @@ function buildHomepage() {
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        ${featuredGuides.map(guide => `
+        ${featuredGuides.map((guide, i) => {
+          const thumbs = ['/assets/guides/guide-buying-checklist.webp', '/assets/guides/guide-compare-choices.webp', '/assets/categories/category-guides.webp'];
+          const thumb = thumbs[i % thumbs.length];
+          return `
           <a href="/guides/${guide.slug}/" class="card card-interactive group">
+            <div style="width:100%;height:150px;margin-bottom:1rem;border-radius:12px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--surface-elevated,#141A26);border:1px solid var(--border-subtle,rgba(255,255,255,.08));">
+              ${assetImg(thumb, { alt: guide.title + ' (decorative thumbnail)', style: 'width:62%;height:62%;object-fit:contain;' })}
+            </div>
             <div class="flex items-center justify-between mb-3">
               <span class="badge">${guide.category}</span>
               <span class="text-xs text-muted">${guide.readingTime}</span>
@@ -320,8 +346,8 @@ function buildHomepage() {
             <h3 class="text-base font-bold text-primary mb-2 group-hover:text-accent-primary transition-colors">${guide.title}</h3>
             <p class="text-xs text-secondary line-clamp-3 mb-4 leading-relaxed">${guide.summary}</p>
             <span class="text-xs font-semibold text-accent-primary mt-auto">Read Full Guide &rarr;</span>
-          </a>
-        `).join('')}
+          </a>`;
+        }).join('')}
       </div>
     </div>
   </section>
@@ -338,24 +364,24 @@ function buildHomepage() {
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center sm:text-left">
           <div class="space-y-2">
-            <div class="w-10 h-10 rounded-xl bg-surface-elevated border border-subtle flex items-center justify-center text-accent-primary mx-auto sm:mx-0">
-              ${ICONS.shield}
+            <div style="width:60px;height:60px;margin-bottom:0.25rem;">
+              ${assetImg('/assets/trust/trust-verified-shield.webp', { alt: 'Verified shield badge (decorative)', style: 'width:100%;height:100%;object-fit:contain;' })}
             </div>
             <h3 class="text-base font-bold text-primary">100% Fact-Checked</h3>
             <p class="text-xs text-secondary leading-relaxed">Editions and platforms are cross-verified against official Rockstar, PlayStation, and Xbox documentation.</p>
           </div>
 
           <div class="space-y-2">
-            <div class="w-10 h-10 rounded-xl bg-surface-elevated border border-subtle flex items-center justify-center text-accent-primary mx-auto sm:mx-0">
-              ${ICONS.info}
+            <div style="width:60px;height:60px;margin-bottom:0.25rem;">
+              ${assetImg('/assets/guides/guide-compare-choices.webp', { alt: 'Compare choices badge (decorative)', style: 'width:100%;height:100%;object-fit:contain;' })}
             </div>
             <h3 class="text-base font-bold text-primary">Transparent Links</h3>
             <p class="text-xs text-secondary leading-relaxed">We clearly distinguish affiliate links from direct official store reference URLs so you always know where you are buying.</p>
           </div>
 
           <div class="space-y-2">
-            <div class="w-10 h-10 rounded-xl bg-surface-elevated border border-subtle flex items-center justify-center text-accent-primary mx-auto sm:mx-0">
-              ${ICONS.check}
+            <div style="width:60px;height:60px;margin-bottom:0.25rem;">
+              ${assetImg('/assets/trust/trust-independent-review.webp', { alt: 'Independent review badge (decorative)', style: 'width:100%;height:100%;object-fit:contain;' })}
             </div>
             <h3 class="text-base font-bold text-primary">Independent Advice</h3>
             <p class="text-xs text-secondary leading-relaxed">We explain when you should save money with standard editions and provide clear warnings regarding code-in-box deliveries.</p>
@@ -366,8 +392,12 @@ function buildHomepage() {
   </section>
 
   <!-- Section M: Final CTA -->
-  <section class="py-20 border-t border-subtle text-center bg-secondary/50">
-    <div class="container-custom max-w-2xl">
+  <section class="border-t border-subtle text-center bg-secondary/50" style="position:relative;overflow:hidden;padding-top:6rem;padding-bottom:6rem;">
+    <div style="position:absolute;inset:0;z-index:0;">
+      ${assetImg('/assets/shared/final-cta-banner.webp', { alt: '', style: 'width:100%;height:100%;object-fit:cover;opacity:0.3;' })}
+      <div style="position:absolute;inset:0;background:var(--bg-primary,#090714);opacity:0.72;"></div>
+    </div>
+    <div class="container-custom max-w-2xl" style="position:relative;z-index:10;">
       <h2 class="text-3xl sm:text-4xl font-bold text-primary mb-4">FIND YOUR NEXT GTA EXPERIENCE.</h2>
       <p class="text-sm text-secondary mb-8">
         Discover verified editions, explore soundtrack vinyls, and check peripheral compatibility for Leonida.
@@ -400,6 +430,7 @@ function buildGta6Pages() {
   const gta6HubContent = `
   <section class="py-12 md:py-20 border-b border-subtle relative overflow-hidden">
     <div class="hero-glow"></div>
+    ${heroBanner('/assets/gta-6/gta6-hub-banner.webp', 0.24, 0.42)}
     <div class="container-custom relative z-10">
       <div class="max-w-3xl">
         <span class="badge mb-4">Flagship Title Hub</span>
@@ -702,8 +733,9 @@ function buildGta6Pages() {
 function buildGamesPages() {
   // Page 8: /games/ (All Games Directory with client-side interactive filter & sort)
   const allGamesContent = `
-  <section class="py-12 border-b border-subtle">
-    <div class="container-custom">
+  <section class="py-12 border-b border-subtle" style="position:relative;overflow:hidden;">
+    ${heroBanner('/assets/games/franchise-explorer-banner.webp', 0.20, 0.55)}
+    <div class="container-custom" style="position:relative;z-index:10;">
       <div class="max-w-3xl mb-8">
         <span class="badge mb-3">Complete Series Catalogue</span>
         <h1 class="text-3xl sm:text-5xl font-bold text-primary mb-3">All Grand Theft Auto Games</h1>
@@ -972,8 +1004,9 @@ function buildCommerceAndComparePages() {
   // Page 21: /merchandise/
   const merchProducts = products.filter(p => p.category === 'official_merch');
   const merchContent = `
-  <section class="py-12 border-b border-subtle">
-    <div class="container-custom">
+  <section class="py-12 border-b border-subtle" style="position:relative;overflow:hidden;">
+    ${heroBanner('/assets/merchandise/merchandise-showcase-banner.webp', 0.22, 0.55)}
+    <div class="container-custom" style="position:relative;z-index:10;">
       <div class="max-w-3xl mb-8">
         <span class="badge mb-3">Official Apparel & Collectibles</span>
         <h1 class="text-3xl sm:text-5xl font-bold text-primary mb-3">Official GTA 6 Merchandise</h1>
@@ -998,8 +1031,9 @@ function buildCommerceAndComparePages() {
   // Page 22: /accessories/
   const accessoryProducts = products.filter(p => p.category === 'gaming_accessories');
   const accessoriesContent = `
-  <section class="py-12 border-b border-subtle">
-    <div class="container-custom">
+  <section class="py-12 border-b border-subtle" style="position:relative;overflow:hidden;">
+    ${heroBanner('/assets/accessories/accessories-showcase-banner.webp', 0.22, 0.55)}
+    <div class="container-custom" style="position:relative;z-index:10;">
       <div class="max-w-3xl mb-8">
         <span class="badge mb-3">Hardware & Peripherals</span>
         <h1 class="text-3xl sm:text-5xl font-bold text-primary mb-3">GTA Gaming Accessories</h1>
@@ -1053,8 +1087,9 @@ function buildCommerceAndComparePages() {
 function buildGuidesPages() {
   // Page 24: /guides/ (Guides Hub)
   const guidesHubContent = `
-  <section class="py-12 border-b border-subtle">
-    <div class="container-custom">
+  <section class="py-12 border-b border-subtle" style="position:relative;overflow:hidden;">
+    ${heroBanner('/assets/guides/guides-editorial-banner.webp', 0.20, 0.55)}
+    <div class="container-custom" style="position:relative;z-index:10;">
       <div class="max-w-3xl mb-12">
         <span class="badge mb-3">Editorial Resources</span>
         <h1 class="text-3xl sm:text-5xl font-bold text-primary mb-3">GTA Buyer Guides & Analysis</h1>
@@ -1064,11 +1099,19 @@ function buildGuidesPages() {
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        ${guides.map(g => `
+        ${guides.map((g, i) => {
+          const gThumbs = ['/assets/guides/guide-buying-checklist.webp', '/assets/guides/guide-compare-choices.webp', '/assets/categories/category-guides.webp'];
+          const gThumb = gThumbs[i % gThumbs.length];
+          return `
           <div class="card p-8 group">
-            <div class="flex items-center justify-between mb-3">
-              <span class="badge">${g.category}</span>
-              <span class="text-xs text-muted">${g.readingTime}</span>
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
+              <div style="width:64px;height:64px;flex:0 0 auto;">
+                ${assetImg(gThumb, { alt: g.title + ' (decorative thumbnail)', style: 'width:100%;height:100%;object-fit:contain;' })}
+              </div>
+              <div class="flex items-center justify-between" style="flex:1 1 auto;">
+                <span class="badge">${g.category}</span>
+                <span class="text-xs text-muted">${g.readingTime}</span>
+              </div>
             </div>
             <h2 class="text-xl font-bold text-primary mb-3 group-hover:text-accent-primary transition-colors">
               <a href="/guides/${g.slug}/">${g.title}</a>
@@ -1078,8 +1121,8 @@ function buildGuidesPages() {
               <span class="text-xs text-muted">Updated: ${g.updatedAt}</span>
               <a href="/guides/${g.slug}/" class="text-xs font-bold text-accent-primary hover:underline">Read Full Guide &rarr;</a>
             </div>
-          </div>
-        `).join('')}
+          </div>`;
+        }).join('')}
       </div>
     </div>
   </section>`;

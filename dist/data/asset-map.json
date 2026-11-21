@@ -1,0 +1,233 @@
+{
+  "/assets/accessories/accessories-showcase-banner.webp": {
+    "section": "accessories",
+    "width": 1500,
+    "height": 656,
+    "transparent": false,
+    "maxRecommendedDisplayWidthPx": 900
+  },
+  "/assets/accessories/accessory-chair.webp": {
+    "section": "accessories",
+    "width": 168,
+    "height": 191,
+    "transparent": true,
+    "maxRecommendedDisplayWidthPx": 168
+  },
+  "/assets/accessories/accessory-keyboard.webp": {
+    "section": "accessories",
+    "width": 279,
+    "height": 125,
+    "transparent": true,
+    "maxRecommendedDisplayWidthPx": 279
+  },
+  "/assets/accessories/accessory-monitor.webp": {
+    "section": "accessories",
+    "width": 251,
+    "height": 176,
+    "transparent": true,
+    "maxRecommendedDisplayWidthPx": 251
+  },
+  "/assets/accessories/accessory-mouse.webp": {
+    "section": "accessories",
+    "width": 173,
+    "height": 134,
+    "transparent": true,
+    "maxRecommendedDisplayWidthPx": 173
+  },
+  "/assets/branding/logo-main.webp": {
+    "section": "branding",
+    "width": 1100,
+    "height": 1100,
+    "transparent": true,
+    "maxRecommendedDisplayWidthPx": 900
+  },
+  "/assets/categories/category-accessories.webp": {
+    "section": "categories",
+    "width": 760,
+    "height": 760,
+    "transparent": true,
+    "maxRecommendedDisplayWidthPx": 760
+  },
+  "/assets/categories/category-all-games.webp": {
+    "section": "categories",
+    "width": 760,
+    "height": 760,
+    "transparent": true,
+    "maxRecommendedDisplayWidthPx": 760
+  },
+  "/assets/categories/category-editions.webp": {
+    "section": "categories",
+    "width": 760,
+    "height": 760,
+    "transparent": true,
+    "maxRecommendedDisplayWidthPx": 760
+  },
+  "/assets/categories/category-gta6-spotlight.webp": {
+    "section": "categories",
+    "width": 760,
+    "height": 760,
+    "transparent": true,
+    "maxRecommendedDisplayWidthPx": 760
+  },
+  "/assets/categories/category-guides.webp": {
+    "section": "categories",
+    "width": 760,
+    "height": 760,
+    "transparent": true,
+    "maxRecommendedDisplayWidthPx": 760
+  },
+  "/assets/categories/category-merchandise.webp": {
+    "section": "categories",
+    "width": 760,
+    "height": 760,
+    "transparent": true,
+    "maxRecommendedDisplayWidthPx": 760
+  },
+  "/assets/games/franchise-explorer-banner.webp": {
+    "section": "games",
+    "width": 1500,
+    "height": 656,
+    "transparent": false,
+    "maxRecommendedDisplayWidthPx": 900
+  },
+  "/assets/games/timeline-classic-era.webp": {
+    "section": "games",
+    "width": 900,
+    "height": 900,
+    "transparent": true,
+    "maxRecommendedDisplayWidthPx": 900
+  },
+  "/assets/games/timeline-modern-era.webp": {
+    "section": "games",
+    "width": 900,
+    "height": 900,
+    "transparent": true,
+    "maxRecommendedDisplayWidthPx": 900
+  },
+  "/assets/games/timeline-retro-era.webp": {
+    "section": "games",
+    "width": 900,
+    "height": 900,
+    "transparent": true,
+    "maxRecommendedDisplayWidthPx": 900
+  },
+  "/assets/gta-6/gta6-hub-banner.webp": {
+    "section": "gta-6",
+    "width": 1500,
+    "height": 656,
+    "transparent": false,
+    "maxRecommendedDisplayWidthPx": 900
+  },
+  "/assets/guides/guide-buying-checklist.webp": {
+    "section": "guides",
+    "width": 900,
+    "height": 900,
+    "transparent": true,
+    "maxRecommendedDisplayWidthPx": 900
+  },
+  "/assets/guides/guide-compare-choices.webp": {
+    "section": "guides",
+    "width": 900,
+    "height": 900,
+    "transparent": true,
+    "maxRecommendedDisplayWidthPx": 900
+  },
+  "/assets/guides/guides-editorial-banner.webp": {
+    "section": "guides",
+    "width": 1500,
+    "height": 722,
+    "transparent": false,
+    "maxRecommendedDisplayWidthPx": 900
+  },
+  "/assets/hero/hero-controller.webp": {
+    "section": "hero",
+    "width": 1100,
+    "height": 1100,
+    "transparent": true,
+    "maxRecommendedDisplayWidthPx": 900
+  },
+  "/assets/hero/hero-neon-city.webp": {
+    "section": "hero",
+    "width": 1600,
+    "height": 900,
+    "transparent": true,
+    "maxRecommendedDisplayWidthPx": 900
+  },
+  "/assets/hero/hero-sports-car.webp": {
+    "section": "hero",
+    "width": 1448,
+    "height": 1086,
+    "transparent": true,
+    "maxRecommendedDisplayWidthPx": 900
+  },
+  "/assets/hero/hero-ui-cards.webp": {
+    "section": "hero",
+    "width": 1448,
+    "height": 1086,
+    "transparent": true,
+    "maxRecommendedDisplayWidthPx": 900
+  },
+  "/assets/merchandise/merch-cap.webp": {
+    "section": "merchandise",
+    "width": 223,
+    "height": 162,
+    "transparent": true,
+    "maxRecommendedDisplayWidthPx": 223
+  },
+  "/assets/merchandise/merch-hoodie.webp": {
+    "section": "merchandise",
+    "width": 239,
+    "height": 214,
+    "transparent": true,
+    "maxRecommendedDisplayWidthPx": 239
+  },
+  "/assets/merchandise/merch-keychain.webp": {
+    "section": "merchandise",
+    "width": 93,
+    "height": 204,
+    "transparent": true,
+    "maxRecommendedDisplayWidthPx": 93
+  },
+  "/assets/merchandise/merch-tshirt.webp": {
+    "section": "merchandise",
+    "width": 236,
+    "height": 207,
+    "transparent": true,
+    "maxRecommendedDisplayWidthPx": 236
+  },
+  "/assets/merchandise/merchandise-showcase-banner.webp": {
+    "section": "merchandise",
+    "width": 1500,
+    "height": 680,
+    "transparent": false,
+    "maxRecommendedDisplayWidthPx": 900
+  },
+  "/assets/shared/final-cta-banner.webp": {
+    "section": "shared",
+    "width": 1500,
+    "height": 713,
+    "transparent": false,
+    "maxRecommendedDisplayWidthPx": 900
+  },
+  "/assets/shared/newsletter-notification.webp": {
+    "section": "shared",
+    "width": 900,
+    "height": 900,
+    "transparent": true,
+    "maxRecommendedDisplayWidthPx": 900
+  },
+  "/assets/trust/trust-independent-review.webp": {
+    "section": "trust",
+    "width": 900,
+    "height": 900,
+    "transparent": true,
+    "maxRecommendedDisplayWidthPx": 900
+  },
+  "/assets/trust/trust-verified-shield.webp": {
+    "section": "trust",
+    "width": 900,
+    "height": 900,
+    "transparent": true,
+    "maxRecommendedDisplayWidthPx": 900
+  }
+}
